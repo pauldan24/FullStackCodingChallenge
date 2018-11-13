@@ -1,5 +1,5 @@
 from flask import request, g, Blueprint, render_template
-from app.models import db,Deck,Card # import the db, and the models
+from app.models import Deck,Card # import the db, and the models
 import copy # for copy operations
 
 
