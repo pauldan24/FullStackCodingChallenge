@@ -9,16 +9,16 @@ db = SQLAlchemy()
 #class to represrent playing card
 class Card(object):
 
-    rank_names = [None, "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-                 "Jack", "Queen", "King"]
-    suit_names = ["Clubs", "Diamonds", "Hearts", "Spades"]
+    rank_names = [None, "ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                 "jack", "queen", "king"]
+    suit_names = ["clubs", "diamonds", "hearts", "spades"]
 
     def __init__(self, rank, suit):
         self.rank = rank
         self.suit = suit
 
     def __str__(self):
-        return '%s of %s' % (Card.rank_names[self.rank], Card.suit_names[self.suit])
+        return '%s_of_%s' % (Card.rank_names[self.rank], Card.suit_names[self.suit])
 
     # rich comparison method
     def __lt__(self, other):
