@@ -33,4 +33,4 @@ def index():
     # and the cards drawn from the top of each deck
     return render_template("home/index.html",
     saved_shuffled_deck = saved_shuffled_deck, shuffled_deck_draw_card = shuffled_deck_draw_card,
-    saved_sorted_deck=saved_sorted_deck,sorted_deck_draw_card=sorted_deck_draw_card)
+    sorted_deck=sorted_deck,sorted_deck_draw_card=sorted_deck_draw_card)

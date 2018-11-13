@@ -2,12 +2,34 @@
 {% block title %} Home {% endblock %}
 {% block body %}
 
+
 {% if shuffled_deck_draw_card %}
-<div class="item">
+<div class="gallery">
   <a target="_blank" href="{{url_for('static', filename ='images/')}}{{shuffled_deck_draw_card}}.svg">
-    <img src="{{url_for('static', filename ='images/')}}{{shuffled_deck_draw_card}}.svg" id="1"style="width:50%;  max-height: 200px;">
+    <img src="{{url_for('static', filename ='images/')}}{{shuffled_deck_draw_card}}.svg" id="1"style="width:100%; ">
   </a>
 </div>
 {%endif%}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Original Deck</h1>
+{% if sorted_deck.cards %}
+{% for card in sorted_deck.cards %}
+<div class="gallery">
+  <a target="_blank" href="{{url_for('static', filename ='images/')}}{{card}}.svg">
+    <img src="{{url_for('static', filename ='images/')}}{{card}}.svg" id="1"style="width:100%; ">
+  </a>
+</div>
+{%endfor%}
+{%endif%}
+
 
 {% endblock %}
